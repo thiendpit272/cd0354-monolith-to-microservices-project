@@ -1,5 +1,5 @@
-import {Sequelize} from 'sequelize-typescript';
-import {config} from './config/config';
+import { Sequelize } from 'sequelize-typescript';
+import { config } from './config/config';
 
 
 export const sequelize = new Sequelize({
@@ -9,5 +9,11 @@ export const sequelize = new Sequelize({
   'host': config.host,
 
   'dialect': config.dialect,
+  'dialectOptions': {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    }
+  },
   'storage': ':memory:',
 });
