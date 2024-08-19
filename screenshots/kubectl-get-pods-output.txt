@@ -1,0 +1,6 @@
+kubectl get pods
+NAME                            READY   STATUS    RESTARTS   AGE
+backend-feed-85c7985476-xrqhn   1/1     Running   0          31m
+backend-user-5c5c7ffb85-8tfd8   1/1     Running   0          31m
+frontend-548d9dbb44-cjgwv       1/1     Running   0          93m
+reverseproxy-68bb9fbd5d-vhggd   1/1     Running   0          93m

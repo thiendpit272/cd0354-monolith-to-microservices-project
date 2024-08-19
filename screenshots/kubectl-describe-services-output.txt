@@ -1,0 +1,90 @@
+kubectl describe services
+Name:                     backend-feed
+Namespace:                default
+Labels:                   udagram-app=backend-feed
+Annotations:              <none>
+Selector:                 udagram-app=backend-feed
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.2.213
+IPs:                      10.100.2.213
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+Endpoints:                192.168.35.13:8080,192.168.21.160:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     backend-user
+Namespace:                default
+Labels:                   udagram-app=backend-user
+Annotations:              <none>
+Selector:                 udagram-app=backend-user
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.89.76
+IPs:                      10.100.89.76
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+Endpoints:                192.168.25.176:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     frontend
+Namespace:                default
+Labels:                   udagram-app=frontend
+Annotations:              <none>
+Selector:                 udagram-app=frontend
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.123.121
+IPs:                      10.100.123.121
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+Endpoints:                192.168.49.188:80
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     kubernetes
+Namespace:                default
+Labels:                   component=apiserver
+                          provider=kubernetes
+Annotations:              <none>
+Selector:                 <none>
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.0.1
+IPs:                      10.100.0.1
+Port:                     https  443/TCP
+TargetPort:               443/TCP
+Endpoints:                192.168.125.184:443,192.168.78.137:443
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     reverseproxy
+Namespace:                default
+Labels:                   udagram-app=reverseproxy
+Annotations:              <none>
+Selector:                 udagram-app=reverseproxy
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.85.221
+IPs:                      10.100.85.221
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+Endpoints:                192.168.14.4:8080
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
